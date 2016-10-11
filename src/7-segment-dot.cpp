@@ -37,10 +37,14 @@ int main(void) {
 #endif
 
     uint32_t frame [] = {
-    		0x80000000,
+    		0x21000000,
+			0x00000000,
+			0x00800000,
 			0x00800000,
 			0x00008000,
-			0x00000080
+			0x00008000,
+			0x00000080,
+			0x00000080,
     };
 
     SWM_init();
@@ -54,7 +58,7 @@ int main(void) {
     	show_dot(frame[i]);
     	delay();
     	i++;
-    	if (i > 3) i = 0;
+    	if (i > 7) i = 0;
     }
 
     // Unreachable code
